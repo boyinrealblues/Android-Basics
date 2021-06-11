@@ -39,7 +39,7 @@ class MainActivityTest{
     }
 
     @Test
-    fun isTitleAmdButtonVisible(){
+    fun isTitleAndButtonVisible(){
         val ActivityScenario = ActivityScenario.launch(MainActivity::class.java)
 
         onView(withId(R.id.main_activity_title)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
