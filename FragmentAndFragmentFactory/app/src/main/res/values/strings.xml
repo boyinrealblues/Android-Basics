@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FragmentAndFragmentFactory</string>
+    <string name="bts_description">BTS (Korean: 방탄소년단; RR: Bangtan Sonyeondan), also known as the Bangtan Boys, is a seven-member South Korean boy band that began formation in 2010 and debuted in 2013 under Big Hit Entertainment.Originally a hip hop group, their musical style has evolved to include a wide range of genres. Their lyrics, often focused on personal and social commentary, touch on the themes of mental health, troubles of school-age youth and coming-of-age, loss, the journey towards loving oneself, and individualism. Their work features references to literature and psychological concepts and includes an alternative universe storyline. The group has released several albums and performed on several world tours.
+
+Having sold over 20 million albums on the Gaon Music Chart, BTS is the best-selling artist in South Korean history and holds the best-selling album in South Korea with Map of the Soul: 7. They are the first and only Asian and non-English speaking act to be named the IFPI Global Recording Artist of the Year (2020) and to chart on Billboard's Top Touring Artists of the 2010s
+
+Throughout their career, BTS received numerous accolades for their work, including 6 American Music Awards, 9 Billboard Music Awards and 24 Golden Disk Awards, and nominations for a Grammy Award and a Brit Award. Following the establishment of their Love Myself anti-violence campaign in partnership with UNICEF, BTS addressed the United Nations 73rd and 75th General Assemblies and became the youngest ever recipients of the Order of Cultural Merit from the President of South Korea due to their contributions in spreading Korean culture and language.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
