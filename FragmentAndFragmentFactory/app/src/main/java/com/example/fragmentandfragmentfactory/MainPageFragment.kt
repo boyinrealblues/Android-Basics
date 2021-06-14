@@ -51,8 +51,9 @@ class MainPageFragment(private val dataSource : RemoteDataSource) : Fragment() {
     private fun initViews() {
         binding.title.setText(data.name)
         binding.description.setText(resources.getString(data.description))
-        Glide.with(this@MainPageFragment)
-            .load("upload.wikimedia.org/wikipedia/commons/4/4f/BTS_for_Dispatch_White_Day_Special%2C_27_February_2019_01.jpg").centerCrop().into(binding.image)
+        Glide.with(this)
+            .load("https://upload.wikimedia.org/wikipedia/commons/4/4f/BTS_for_Dispatch_White_Day_Special%2C_27_February_2019_01.jpg").placeholder(R.drawable.bts)
+                .centerCrop().into(binding.image)
     }
 
 }
