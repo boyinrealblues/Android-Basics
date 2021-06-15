@@ -7,9 +7,9 @@ class BTSFragmentFactory(private val dataSource: RemoteDataSource) : FragmentFac
 
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
 
-       if(className==MainPageFragment::class.java.name){
-           return MainPageFragment(dataSource)
-       }
+        when(className){
+            MainPageFragment::class.java.name -> return MainPageFragment(dataSource)
+        }
         return super.instantiate(classLoader, className)
     }
 }
