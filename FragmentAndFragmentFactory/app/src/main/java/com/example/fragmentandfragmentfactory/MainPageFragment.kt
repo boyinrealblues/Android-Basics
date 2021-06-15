@@ -40,11 +40,9 @@ class MainPageFragment(private val dataSource : RemoteDataSource) : Fragment() {
     }
 
     private fun navigateToMembers() {
-        val bundle = Bundle()
-        bundle.putStringArrayList("bts",data.Members)
         parentFragmentManager.beginTransaction()
-            .replace(R.id.container,MembersFragment::class.java,bundle)
-            .addToBackStack("MambersFragment").commit()
+            .replace(R.id.container,MembersFragment::class.java,null)
+            .addToBackStack("MembersFragment").commit()
 
     }
 

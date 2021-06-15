@@ -1,49 +1,61 @@
 package com.example.fragmentandfragmentfactory
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fragmentandfragmentfactory.databinding.FragmentMainPageBinding
 import com.example.fragmentandfragmentfactory.databinding.FragmentMembersBinding
 
-class MembersFragment() : Fragment() {
+private const val TAG = "MembersFragment"
+class MembersFragment(private val dataSource: RemoteDataSource) : Fragment() , BTSViewHolder.Interaction {
 
     lateinit private var binding : FragmentMembersBinding
 
-     lateinit private var data : ArrayList<String>
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-            arguments?.let{
-                it.getStringArrayList("bts")?.let{
-                    data = it
-                }
-            }
-    }
+      private var data : ArrayList<Members>
+
+     init{
+         data = dataSource.getBTS().Members
+            Log.e(TAG , dataSource.getBTS().toString())
+     }
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        //what is container , inflater , inflate , DataBindingUtil
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_members,container,false)
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            initializeView()
+        initializeRecyclerView()
     }
 
-    private fun initializeView() {
-        var sb = StringBuilder()
-        for(member in data){
-            sb=sb.append("${member}\n")
+    private fun initializeRecyclerView() {
+        binding.recyclerView.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = BTSAdapter(data,this@MembersFragment)
+
         }
-        binding.membersList.setText(sb.toString())
     }
-}
+
+        override fun onItemClick(view : View, position: Int) {
+
+            val item = data[position]
+            val bundle = Bundle()
+            bundle.putInt("army", item.id)
+                    parentFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.container, InfoFragment::class.java, bundle)
+                        .addToBackStack("InfoFragment")
+                        .commit()
+        }
+    }

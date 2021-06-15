@@ -5,11 +5,13 @@ import androidx.fragment.app.FragmentFactory
 
 class BTSFragmentFactory(private val dataSource: RemoteDataSource) : FragmentFactory() {
 
-    override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
+    override fun instantiate(classLoader: ClassLoader, className: String):Fragment =
 
-        when(className){
-            MainPageFragment::class.java.name -> return MainPageFragment(dataSource)
+        when (className) {
+            MainPageFragment::class.java.name ->   MainPageFragment(dataSource)
+            MembersFragment::class.java.name ->  MembersFragment(dataSource)
+            InfoFragment::class.java.name-> InfoFragment(dataSource)
+            else ->  super.instantiate(classLoader, className)
         }
-        return super.instantiate(classLoader, className)
-    }
+
 }
