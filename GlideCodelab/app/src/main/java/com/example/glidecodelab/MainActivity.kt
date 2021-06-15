@@ -14,7 +14,14 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         attach()
+        binding.button.setOnClickListener {
+            detach()
+        }
     }
+
+    private fun detach() {
+           Glide.with(this).clear(binding.image)
+        }
 
     private fun attach() {
         Glide.with(this).load("https://i.pinimg.com/originals/c6/b5/d0/c6b5d070a10f816be2e6199f40d8e77a.png").into(binding.image)
