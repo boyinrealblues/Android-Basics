@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.example.fragmentandfragmentfactory.databinding.FragmentInfoBinding
 
 private const val TAG = "InfoFragment"
-class InfoFragment( val dataSource: RemoteDataSource) : Fragment() {
+class InfoFragment(val dataSource: RemoteDataSource) : Fragment() {
 init {
     Log.e(TAG, "came")
 }

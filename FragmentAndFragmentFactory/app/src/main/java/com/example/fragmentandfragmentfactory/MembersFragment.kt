@@ -51,6 +51,7 @@ class MembersFragment(private val dataSource: RemoteDataSource) : Fragment() , B
 
             val item = data[position]
             val bundle = Bundle()
+            Log.e(TAG,item.name)
             bundle.putInt("army", item.id)
                     parentFragmentManager
                         .beginTransaction()

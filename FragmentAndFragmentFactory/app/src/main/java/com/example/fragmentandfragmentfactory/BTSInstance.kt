@@ -12,7 +12,7 @@ object BTSInstance {
 
                                     "https://lh3.googleusercontent.com/znytw2BkzEYJv20Xp-0f8TMaopbemaVWLiRirBZ217Hxuo5vgX-KAKZDLdY3VojsYWXvfm5ollyUiAvecuwdNqzJ",
                                     "Vocals",
-                                    "",0
+                                    R.string.V,0
                             ),
 
                             Members(
@@ -20,7 +20,7 @@ object BTSInstance {
 
                                     "https://lh3.googleusercontent.com/QOg83Fcsg3t2TAIv6TyEhiw_50-3xo5qmSkhvvQTN--DTnSM2sva48svlCa4PGxRMpEk6QWIDLOea9Nefi_BSftlwg",
                                     "Rapper",
-                                    "",1
+                                    R.string.suga,1
                             ),
 
                             Members(
@@ -28,7 +28,7 @@ object BTSInstance {
 
                                     "https://lh3.googleusercontent.com/JcDUamBfHr7Z1xHOdTFBeKGENGE8T0_T9b3LwIig7vetYtclP9zC3lG0DqNGTkW5yIFeKSkYL1j0IoouGnNUwSI",
                                     "Vocals",
-                                    "",2
+                                    R.string.jin,2
                             ),
 
                             Members(
@@ -36,7 +36,7 @@ object BTSInstance {
 
                                     "https://lh3.googleusercontent.com/ySGr_6TcIV72uj7ao2Hcvq_pdsBkukZKyFgDTmvnqgUhFT0LAAWD2qXdHyXHqtcRabltLq-h2dKF_PQeSatvAXlC",
                                     "Lead Vocals",
-                                    "",3
+                                    R.string.jimin,3
                             ),
 
                             Members(
@@ -44,7 +44,7 @@ object BTSInstance {
 
                                     "https://lh3.googleusercontent.com/MZ_Qo6QWY-pNlUgcHMX3-ZyjG25w_xdoO_vuFgJU-MYurjjKelfgDS5e7iMEOkO_XDw2Np0qjYoVt2q_xOdxMJpZ",
                                     "Rapper",
-                                    "",4
+                                    R.string.rm,4
                             ),
 
                             Members(
@@ -52,14 +52,14 @@ object BTSInstance {
 
                                     "https://lh3.googleusercontent.com/--jMozOPDfAu7ydQ5QICf2AGkpqVYjS_Yrg5HoIXN-TN3h1doQZ_EuzJQ29y_o6k2pezsKrbGihJzZbGlW3EFHUP",
                                     "Main Vocals",
-                                    "",5),
+                                    R.string.Jungkook,5),
 
                             Members(
                                     "J-Hope",
 
                                     "https://lh3.googleusercontent.com/n06hJ6kZfTOZd51P6j97u2AT6wSfNsLvupYf3huQwJxVibWV7Rl1b6YNOYUcreZlKKihHo--8kDRfajQ5Lu4DQr2",
                                     "Rapper",
-                                    "",6
+                                    R.string.jhope,6
                             ),
 
                     )

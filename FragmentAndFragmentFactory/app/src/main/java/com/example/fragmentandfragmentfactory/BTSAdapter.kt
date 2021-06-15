@@ -32,7 +32,9 @@ class BTSViewHolder(itemView : View, private val interaction : Interaction?) : R
         val nameView = findViewById<TextView>(R.id.member_name)
                     nameView.setText(itemData.name)
 
-            interaction?.onItemClick(this,adapterPosition)
+        itemView.setOnClickListener {
+            interaction?.onItemClick(this, adapterPosition)
+        }
     }
 
     interface Interaction{
