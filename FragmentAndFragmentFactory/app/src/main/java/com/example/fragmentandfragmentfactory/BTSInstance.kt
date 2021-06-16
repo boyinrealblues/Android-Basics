@@ -61,8 +61,12 @@ object BTSInstance {
                                     "Rapper",
                                     R.string.jhope,6
                             ),
-
                     )
+
+
+
+
+
             )
 
 }

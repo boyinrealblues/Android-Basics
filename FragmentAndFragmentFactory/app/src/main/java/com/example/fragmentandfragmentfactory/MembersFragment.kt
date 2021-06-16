@@ -43,9 +43,9 @@ class MembersFragment(private val dataSource: RemoteDataSource) : Fragment() , B
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = BTSAdapter(data,this@MembersFragment)
-
         }
     }
+
 
         override fun onItemClick(view : View, position: Int) {
 
