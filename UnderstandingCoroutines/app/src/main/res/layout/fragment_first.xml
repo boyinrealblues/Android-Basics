@@ -17,6 +17,27 @@
             android:textSize="25sp" />
 
         <Button
+            android:id="@+id/scope1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GLOBAL SCOPE"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/scope2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIFECYCLE SCOPE"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/scope3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CUSTOM SCOPE"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center" />
+        <Button
             android:id="@+id/navigate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
