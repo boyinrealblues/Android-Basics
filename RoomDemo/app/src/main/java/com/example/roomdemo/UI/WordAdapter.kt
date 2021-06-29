@@ -11,7 +11,7 @@ import com.example.roomdemo.Room.Word
 
 class WordAdapter : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
-    private var oldlist = emptyList<String>()
+    private var oldlist = emptyList<Word>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         return WordViewHolder.create(parent)
@@ -19,7 +19,7 @@ class WordAdapter : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
 
-        holder.bind(oldlist[position])
+        holder.bind(oldlist[position].word)
 
     }
 
@@ -43,7 +43,7 @@ class WordAdapter : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
         }
     }
 
-        fun submitList(newList : List<String>){
+        fun submitList(newList : List<Word>){
             val diff = WordDiffUtil(oldList = oldlist ,newList)
             oldlist = newList
             val calc = DiffUtil.calculateDiff(diff)

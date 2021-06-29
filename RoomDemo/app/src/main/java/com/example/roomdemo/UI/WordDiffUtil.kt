@@ -1,8 +1,9 @@
 package com.example.roomdemo.UI
 
 import androidx.recyclerview.widget.DiffUtil
+import com.example.roomdemo.Room.Word
 
-class WordDiffUtil(private val oldList : List<String> , private val newList : List<String> ) : DiffUtil.Callback() {
+class WordDiffUtil(private val oldList : List<Word>, private val newList : List<Word> ) : DiffUtil.Callback() {
     override fun getOldListSize() = oldList.size
     override fun getNewListSize() = newList.size
 
