@@ -12,6 +12,7 @@
         android:textAlignment="center"
         android:textColor="Black"
         android:textSize="25sp"
+        style="@style/word_title"
         android:background="@android:color/holo_orange_dark"/>
 
 </LinearLayout>
