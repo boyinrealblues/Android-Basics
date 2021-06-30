@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(),WordAdapter.itemClickListener {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        model = ViewModelProvider(this , WordViewModelFactory((application as WordApplication).repository)).get(WordViewModel::class.java)
+        model = ViewModelProvider(this , WordViewModelFactory((application as WordApplication).database.getDao())).get(WordViewModel::class.java)
         val mAdapter = WordAdapter(this)
 
         binding.recyclerView.apply{
