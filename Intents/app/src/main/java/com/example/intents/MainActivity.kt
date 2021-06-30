@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }catch(e:ClassNotFoundException){
             Toast.makeText(this, "App not found", Toast.LENGTH_SHORT).show()
+            
         }
         }
 }
