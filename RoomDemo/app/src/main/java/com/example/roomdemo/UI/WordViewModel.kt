@@ -8,19 +8,19 @@ import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class WordViewModel(private val wordDao: WordDao) : ViewModel() {
+class WordViewModel(private val repository: WordRepository) : ViewModel() {
 
-    val allWords : LiveData<List<Word>> = wordDao.getAllWords().asLiveData()
+    val allWords : LiveData<List<Word>> = repository.wordList.asLiveData()
 
     fun insert(word: Word) = viewModelScope.launch {
-        wordDao.insert(word)
+        repository.insert(word)
     }
 
     fun delete() = viewModelScope.launch{
-        wordDao.deleteEverything()
+        repository.delete()
     }
 
     fun deleteThis(word: Word) = viewModelScope.launch{
-        wordDao.deleteThis(word)
+        repository.deleteEach(word)
     }
 }

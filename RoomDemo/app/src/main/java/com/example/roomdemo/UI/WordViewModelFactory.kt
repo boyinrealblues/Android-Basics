@@ -8,11 +8,11 @@ import com.example.roomdemo.Room.WordDao
 import java.lang.IllegalArgumentException
 
 private const val TAG = "WordViewModelFactory"
-class WordViewModelFactory(private val wordDao: WordDao) : ViewModelProvider.Factory {
+class WordViewModelFactory(private val repository: WordRepository) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
 
-        if(modelClass.isAssignableFrom(WordViewModel::class.java)) return WordViewModel(wordDao) as T
+        if(modelClass.isAssignableFrom(WordViewModel::class.java)) return WordViewModel(repository) as T
 
         
 //        when(modelClass){
