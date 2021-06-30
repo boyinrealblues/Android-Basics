@@ -14,7 +14,9 @@ abstract class WordRoomDatabase : RoomDatabase() {
 
     abstract fun getDao():WordDao
 
+    //Default words in the database
     class WordDataBaseCallBack(private val scope: CoroutineScope) : RoomDatabase.Callback(){
+
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
 
@@ -35,10 +37,13 @@ abstract class WordRoomDatabase : RoomDatabase() {
 
     companion object{
 
+
         @Volatile
         var INSTANCE : WordRoomDatabase? = null
 
         fun getDatabase(context: Context , scope : CoroutineScope):WordRoomDatabase{
+
+        // Use?: If not initialized then initialize / If you are here first time
             return INSTANCE ?: synchronized(this){
                 val instance = Room.databaseBuilder(context.applicationContext , WordRoomDatabase::class.java , "word_database").addCallback(WordDataBaseCallBack(scope)).build()
 

@@ -7,6 +7,7 @@ import com.example.roomdemo.Room.WordRoomDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
+//Make this singleton
 class WordApplication : Application() {
 
     val scope = CoroutineScope(SupervisorJob())

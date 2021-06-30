@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             mAdapter.submitList(it)
         })
 
+
         val content = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
                 if(it.resultCode == Activity.RESULT_OK){
                     val word = it.data?.getStringExtra(NewWordActivity.EXTRA_METADATA)
@@ -48,5 +49,8 @@ class MainActivity : AppCompatActivity() {
             content.launch(intent)
         }
 
+        binding.clearButton.setOnClickListener {
+            model.delete()
+        }
     }
 }
