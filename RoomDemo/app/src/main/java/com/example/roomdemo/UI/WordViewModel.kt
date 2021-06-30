@@ -1,11 +1,10 @@
 package com.example.roomdemo.UI
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.roomdemo.Data.WordRepository
 import com.example.roomdemo.Room.Word
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class WordViewModel(private val repository : WordRepository) : ViewModel() {
