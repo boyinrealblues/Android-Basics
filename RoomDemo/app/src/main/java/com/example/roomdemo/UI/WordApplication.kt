@@ -12,9 +12,12 @@ class WordApplication : Application() {
 
     val scope = CoroutineScope(SupervisorJob())
 
+    //Initialize that database once
     val database by lazy{
         WordRoomDatabase.getDatabase(this,scope)
     }
+
+    //Pass that database to the repository once
     val repository by lazy{
         WordRepository(database.getDao())
     }

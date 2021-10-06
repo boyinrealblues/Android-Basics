@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface WordDao{
+
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     fun getAllWords(): Flow<List<Word>>
 
