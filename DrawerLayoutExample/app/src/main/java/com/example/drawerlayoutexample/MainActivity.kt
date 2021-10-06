@@ -12,13 +12,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         setSupportActionBar(binding.toolbar)
+
         binding.toolbar.setNavigationOnClickListener{
-                binding.drawerLayout.openDrawer(Gravity.RIGHT)
+            //openDrawer(__Define in which gravity the view is located__)
+                binding.drawerLayout.openDrawer(Gravity.LEFT)
         }
         binding.navigationView.setNavigationItemSelectedListener {menuItem->
+            //openDrawer(__Define in which gravity the view needs to be moved__)
             menuItem.isChecked =true
             binding.drawerLayout.closeDrawer(Gravity.LEFT)
             true
         }
+
     }
 }
